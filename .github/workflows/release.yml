@@ -34,7 +34,7 @@ jobs:
       # - name: Verify formatting
       #   run: deno fmt --check
 
-      - name: Run linter
+      - name: Run compile
         run: deno compile --allow-all main.ts
 
       - name: Release
