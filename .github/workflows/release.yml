@@ -44,3 +44,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           files: my-i18n-inlay-hints
+          draft: false
+          prerelease: false
