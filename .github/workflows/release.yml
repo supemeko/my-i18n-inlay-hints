@@ -35,7 +35,7 @@ jobs:
       #   run: deno fmt --check
 
       - name: Run compile
-        run: deno compile --output my_i18n_inlay_hints --allow-all main.ts
+        run: deno compile --output my-i18n-inlay-hints --allow-all main.ts
 
       - name: Release
         uses: softprops/action-gh-release@v2
@@ -43,4 +43,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          files: my_i18n_inlay_hints
+          files: my-i18n-inlay-hints
