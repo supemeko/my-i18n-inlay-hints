@@ -1,0 +1,24 @@
+Stdin closed
+Stdin closed
+Stdin closed
+Stdin closed
+Stdin closed
+Stdin closed
+Stdin closed
+Stdin closed
+[Thu Jul 24 2025 19:13:06 GMT+0800 (China Standard Time)]Stdin closed
+[2025-07-24T11:14:30.297Z]Stdin closed
+[2025-07-24T11:35:03.644Z]Parse error: Unexpected token '我', "我爱你" is not valid JSON
+我爱你
+end
+[2025-07-24T11:35:03.644Z]Parse error: Unexpected token 'w', "world" is not valid JSON
+world
+end
+[2025-07-24T11:35:03.644Z]Stdin closed
+[2025-07-24T17:21:30.869Z]Parse error: Unexpected token '我', "我爱你" is not valid JSON
+我爱你
+end
+[2025-07-24T17:21:30.869Z]Parse error: Unexpected token 'w', "world" is not valid JSON
+world
+end
+[2025-07-24T17:21:30.870Z]Stdin closed

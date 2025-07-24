@@ -1,0 +1,10 @@
+[2025-07-24T17:21:30.868Z]read(9): 我爱你
+[2025-07-24T17:21:30.869Z]write(138): {"jsonrpc":"2.0","error":{"code":-32700,"message":"Parse error: Unexpected token '我', \"我爱你\" is not valid JSON\n我爱你\nend"}}
+[2025-07-24T17:21:30.869Z]responseByte(161)
+[2025-07-24T17:21:30.869Z]respByteBlock(161)
+[2025-07-24T17:21:30.869Z]respByte(161)
+[2025-07-24T17:21:30.869Z]read(5): world
+[2025-07-24T17:21:30.869Z]write(128): {"jsonrpc":"2.0","error":{"code":-32700,"message":"Parse error: Unexpected token 'w', \"world\" is not valid JSON\nworld\nend"}}
+[2025-07-24T17:21:30.869Z]responseByte(151)
+[2025-07-24T17:21:30.869Z]respByteBlock(151)
+[2025-07-24T17:21:30.869Z]respByte(151)
