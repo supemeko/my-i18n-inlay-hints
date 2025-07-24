@@ -35,7 +35,7 @@ jobs:
       #   run: deno fmt --check
 
       - name: Run compile
-        run: deno compile --allow-all main.ts
+        run: deno compile --output my_i18n_inlay_hints --allow-all main.ts
 
       - name: Release
         uses: softprops/action-gh-release@v2
