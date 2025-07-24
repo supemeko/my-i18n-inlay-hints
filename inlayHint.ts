@@ -1,7 +1,9 @@
 // deno-lint-ignore-file
 import { log } from "./log.ts";
-import zh from "./locale.ts";
+import { loadLocaleFile } from "./locale.ts";
 import { documents } from "./documents.ts";
+
+const zh = await loadLocaleFile('/home/garygo/develop/zhai_farm/admin/src/i18n/locale/zh.json')
 
 export const actions = {
   "textDocument/inlayHint": (params: any, id: number) => {

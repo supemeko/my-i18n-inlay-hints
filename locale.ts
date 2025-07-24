@@ -1,3 +1,4 @@
-import zh from '/home/garygo/develop/zhai_farm/admin/src/i18n/locale/zh.json' with { type: 'json' }
-
-export default zh
+export async function loadLocaleFile(path: string) {
+  const zh = await Deno.readFile(path);
+  return JSON.parse(new TextDecoder().decode(zh));
+}
