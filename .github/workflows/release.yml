@@ -37,8 +37,6 @@ jobs:
       - name: Run compile
         run: deno compile --allow-all main.ts
 
-      - name: Checkout
-        uses: actions/checkout@v4
       - name: Release
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
