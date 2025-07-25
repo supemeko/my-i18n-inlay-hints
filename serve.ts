@@ -21,7 +21,10 @@ export async function serve(
     while (buffer.includes("\r\n\r\n")) {
       const [header, ...body] = buffer.split("\r\n\r\n");
       const contentLengthMatch = header.match(/Content-Length: (\d+)/);
-      if (!contentLengthMatch) continue;
+      if (!contentLengthMatch) {
+        ioLog("contentLengthMatch error:" + header)
+        continue
+      };
 
       const contentLength = parseInt(contentLengthMatch[1], 10);
       const bodyByte = encoder.encode(body.join("\r\n\r\n"));
