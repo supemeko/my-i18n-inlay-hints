@@ -1,9 +1,14 @@
 // deno-lint-ignore-file
 import { log } from "./log.ts";
-import { loadLocaleFile } from "./locale.ts";
+import { getWatchFile } from "./locale.ts";
 import { documents } from "./documents.ts";
 
-const zh = await loadLocaleFile('/home/garygo/develop/zhai_farm/admin/src/i18n/locale/zh.json')
+const zh_dict = await getWatchFile([
+  '/home/garygo/develop/zhai_farm/admin/src/i18n/locale/zh.json',
+  '/home/garygo/develop/zhai_farm/admin/src/i18n/locale/zh_dict.json',
+  '/home/garygo/develop/zhai_farm/admin/src/i18n/locale/zh_routers.json',
+  '/home/garygo/develop/zhai_farm/admin/src/i18n/locale/zh_system.json'
+])
 
 export const actions = {
   "textDocument/inlayHint": (params: any, id: number) => {
@@ -13,7 +18,7 @@ export const actions = {
     const uri = params.textDocument.uri;
     const text = documents.get(uri) || "";
 
-    const result = parseText(zh, range, text);
+    const result = parseText(zh_dict, range, text);
     const rangestr = JSON.stringify(range);
     const resultstr = JSON.stringify(result);
     log(
@@ -54,7 +59,7 @@ function parseText(dict: any, range: any, text: any) {
       }
       const i18Key = getI18NKey(line.substring(leftCol + key.length, rightCol));
       if (e < 0 || e > leftCol + key.length) {
-        arr.push(resp(lineNum, leftCol + key.length, dict[i18Key] || i18Key));
+        arr.push(resp(lineNum, leftCol + key.length, dict(i18Key)));
       }
       r = rightCol;
     }
